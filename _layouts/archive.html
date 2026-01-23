@@ -1,0 +1,58 @@
+---
+layout: default
+---
+
+<h1>All Problems</h1>
+
+<div class="card" style="margin-bottom: 2rem;">
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+        <input type="text" id="search-input" placeholder="Search problems..." style="padding: 8px; border: 1px solid var(--border-color); border-radius: 4px; flex: 1;">
+        
+        <select id="difficulty-filter" style="padding: 8px; border: 1px solid var(--border-color); border-radius: 4px;">
+            <option value="all">All Difficulties</option>
+            <option value="Easy">Easy</option>
+            <option value="Medium">Medium</option>
+            <option value="Hard">Hard</option>
+        </select>
+        
+        <select id="topic-filter" style="padding: 8px; border: 1px solid var(--border-color); border-radius: 4px;">
+            <option value="all">All Topics</option>
+            {% assign all_topics = site.problems | map: "topics" | flatten | uniq | sort %}
+            {% for topic in all_topics %}
+            <option value="{{ topic }}">{{ topic }}</option>
+            {% endfor %}
+        </select>
+    </div>
+</div>
+
+<div class="card">
+    <table id="problems-table">
+        <thead>
+            <tr>
+                <th>Problem</th>
+                <th>Difficulty</th>
+                <th>Topics</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% assign problems = site.problems | sort: "date" | reverse %}
+            {% for problem in problems %}
+            <tr data-difficulty="{{ problem.difficulty }}" data-topics="{{ problem.topics | join: ',' }}">
+                <td>
+                    <a href="{{ problem.url | relative_url }}" class="problem-title">{{ problem.title }}</a>
+                </td>
+                <td>
+                    <span class="badge badge-{{ problem.difficulty | downcase }}">{{ problem.difficulty }}</span>
+                </td>
+                <td>
+                    {% for topic in problem.topics %}
+                    <span class="tag">{{ topic }}</span>
+                    {% endfor %}
+                </td>
+                <td>{{ problem.date | date: "%Y-%m-%d" }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>

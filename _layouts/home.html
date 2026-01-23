@@ -1,0 +1,69 @@
+---
+layout: default
+---
+
+{% assign problems = site.problems %}
+{% assign easy_count = problems | where: "difficulty", "Easy" | size %}
+{% assign medium_count = problems | where: "difficulty", "Medium" | size %}
+{% assign hard_count = problems | where: "difficulty", "Hard" | size %}
+{% assign total_count = problems | size %}
+
+<div class="stats-grid">
+    <div class="card stat-card">
+        <span class="stat-value">{{ total_count }}</span>
+        <span class="stat-label">Total Solved</span>
+    </div>
+    <div class="card stat-card" style="border-top: 4px solid var(--easy-color);">
+        <span class="stat-value">{{ easy_count }}</span>
+        <span class="stat-label">Easy</span>
+    </div>
+    <div class="card stat-card" style="border-top: 4px solid var(--medium-color);">
+        <span class="stat-value">{{ medium_count }}</span>
+        <span class="stat-label">Medium</span>
+    </div>
+    <div class="card stat-card" style="border-top: 4px solid var(--hard-color);">
+        <span class="stat-value">{{ hard_count }}</span>
+        <span class="stat-label">Hard</span>
+    </div>
+</div>
+
+<h2>Recent Activity</h2>
+<div class="card">
+    <table>
+        <thead>
+            <tr>
+                <th>Problem</th>
+                <th>Difficulty</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for problem in problems limit:5 %}
+            <tr>
+                <td><a href="{{ problem.url | relative_url }}">{{ problem.title }}</a></td>
+                <td><span class="badge badge-{{ problem.difficulty | downcase }}">{{ problem.difficulty }}</span></td>
+                <td>{{ problem.date | date: "%b %d" }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div style="text-align: right; margin-top: 1rem;">
+        <a href="{{ "/problems/" | relative_url }}">View all problems →</a>
+    </div>
+</div>
+
+<!-- Simple Contribution Graph Placeholder -->
+<!-- In a real scenario, we might generate this via a plugin or JS library -->
+<h2 style="margin-top: 2rem;">Activity Log</h2>
+<div class="card" style="overflow-x: auto;">
+    <div style="display: flex; gap: 4px; min-width: max-content;">
+        {% comment %}
+           Logic to generate a simple calendar grid could go here, 
+           but for simplicity/robustness without plugins, we'll keep it minimal or use a JS lib if needed.
+           For now, a simple placeholder description.
+        {% endcomment %}
+        <p style="color: var(--text-color); opacity: 0.7;">
+            <em>(Contribution graph visualization would be implemented here using Chart.js or similar, populated by the problem dates)</em>
+        </p>
+    </div>
+</div>

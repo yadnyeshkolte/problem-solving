@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<article>
+    <div style="margin-bottom: 2rem;">
+        <h1 style="margin-bottom: 0.5rem;">{{ page.title }}</h1>
+        <div style="margin-bottom: 1rem;">
+            <span class="badge badge-{{ page.difficulty | downcase }}">{{ page.difficulty }}</span>
+            <span style="margin: 0 10px; opacity: 0.6;">|</span>
+            {% for topic in page.topics %}
+            <span class="tag">{{ topic }}</span>
+            {% endfor %}
+            <span style="margin: 0 10px; opacity: 0.6;">|</span>
+            <span style="opacity: 0.6;">Solved: {{ page.date | date: "%b %d, %Y" }}</span>
+        </div>
+        <a href="{{ page.leetcode_url }}" target="_blank" style="display: inline-flex; align-items: center;">
+            View on LeetCode ↗
+        </a>
+    </div>
+
+    <div class="card">
+        <h3>Complexity Analysis</h3>
+        <p><strong>Time Complexity:</strong> {{ page.time_complexity }}</p>
+        <p><strong>Space Complexity:</strong> {{ page.space_complexity }}</p>
+    </div>
+
+    <div class="content">
+        {{ content }}
+    </div>
+</article>
