@@ -7,12 +7,38 @@ layout: default
     <p>{{ page.description }}</p>
 </div>
 
-<p style="margin-bottom: 2rem; color: var(--text-color); opacity: 0.8;">
-    <a href="{{ '/problems/' | relative_url }}">← Back to Dashboard</a>
+{% assign category_problems = site.problems | where: "category", page.category_filter %}
+{% assign total_count = category_problems | size %}
+{% assign easy_count = category_problems | where: "difficulty", "Easy" | size %}
+{% assign medium_count = category_problems | where: "difficulty", "Medium" | size %}
+{% assign hard_count = category_problems | where: "difficulty", "Hard" | size %}
+
+<!-- Stats Grid -->
+<div class="stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+    <div class="card stat-card" style="text-align: center; padding: 1.5rem; margin-bottom: 0;">
+        <span style="font-size: 2rem; font-weight: 700; display: block;">{{ total_count }}</span>
+        <span style="color: var(--text-muted); font-size: 0.9rem;">Total Solved</span>
+    </div>
+    <div class="card stat-card" style="text-align: center; padding: 1.5rem; margin-bottom: 0; border-bottom: 4px solid var(--diff-easy-color);">
+        <span style="font-size: 2rem; font-weight: 700; display: block; color: var(--diff-easy-color);">{{ easy_count }}</span>
+        <span style="color: var(--text-muted); font-size: 0.9rem;">Easy</span>
+    </div>
+    <div class="card stat-card" style="text-align: center; padding: 1.5rem; margin-bottom: 0; border-bottom: 4px solid var(--diff-medium-color);">
+        <span style="font-size: 2rem; font-weight: 700; display: block; color: var(--diff-medium-color);">{{ medium_count }}</span>
+        <span style="color: var(--text-muted); font-size: 0.9rem;">Medium</span>
+    </div>
+    <div class="card stat-card" style="text-align: center; padding: 1.5rem; margin-bottom: 0; border-bottom: 4px solid var(--diff-hard-color);">
+        <span style="font-size: 2rem; font-weight: 700; display: block; color: var(--diff-hard-color);">{{ hard_count }}</span>
+        <span style="color: var(--text-muted); font-size: 0.9rem;">Hard</span>
+    </div>
+</div>
+
+<p style="margin-bottom: 2rem; color: var(--text-muted); font-size: 0.9rem;">
+    <a href="{{ '/' | relative_url }}">← Back to Dashboard</a>
 </p>
 
 <div class="problem-list">
-    {% assign problems = site.problems | where: "category", page.category_filter | sort: "date" | reverse %}
+    {% assign problems = category_problems | sort: "date" | reverse %}
     
     {% if problems.size > 0 %}
         {% for problem in problems %}
@@ -28,7 +54,7 @@ layout: default
                 </div>
             </div>
             <div>
-                 <!-- Difficulty badge already shown on left, maybe show something else here or keep generic -->
+                 <!-- Difficulty badge already shown on left -->
             </div>
         </a>
         {% endfor %}

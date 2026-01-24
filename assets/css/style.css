@@ -1,18 +1,19 @@
 :root {
-  --bg-color: #f8fafc; /* Slightly off-white for depth */
+  --bg-color: #f8fafc;
+  /* Slightly off-white for depth */
   --text-color: #1e293b;
   --text-muted: #64748b;
   --border-color: #e2e8f0;
   --link-color: #2563eb;
   --header-bg: #ffffff;
   --code-bg: #f1f5f9;
-  
+
   --card-bg: #ffffff;
   --card-hover-bg: #ffffff;
-  
+
   --tag-bg: #e0f2fe;
   --tag-text: #0284c7;
-  
+
   /* Difficulty Levels (5 levels) - Refined Palette */
   --diff-basic-color: #475569;
   --diff-basic-bg: #f1f5f9;
@@ -24,14 +25,14 @@
   --diff-hard-bg: #fee2e2;
   --diff-expert-color: #7e22ce;
   --diff-expert-bg: #f3e8ff;
-  
+
   /* Category Colors */
   --cat-dsa-color: #2563eb;
   --cat-sys-color: #10b981;
   --cat-db-color: #f59e0b;
   --cat-js-color: #eab308;
   --cat-lld-color: #8b5cf6;
-  
+
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -45,13 +46,13 @@
   --link-color: #38bdf8;
   --header-bg: #1e293b;
   --code-bg: #1e293b;
-  
+
   --card-bg: #1e293b;
   --card-hover-bg: #334155;
-  
+
   --tag-bg: #0c4a6e;
   --tag-text: #38bdf8;
-  
+
   --diff-basic-bg: rgba(71, 85, 105, 0.3);
   --diff-basic-color: #cbd5e1;
   --diff-easy-bg: rgba(21, 128, 61, 0.3);
@@ -104,10 +105,10 @@ header .container {
 }
 
 .site-title {
-    font-weight: 700;
-    font-size: 1.1rem;
-    color: var(--text-color);
-    text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text-color);
+  text-decoration: none;
 }
 
 nav a {
@@ -123,7 +124,12 @@ nav a:hover {
   color: var(--link-color);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-top: 0;
   margin-bottom: 1rem;
   font-weight: 700;
@@ -142,23 +148,23 @@ a:hover {
 
 /* Hero Section */
 .hero-section {
-    text-align: center;
-    padding: 3rem 1rem 4rem;
+  text-align: center;
+  padding: 2rem 1rem 2rem;
 }
 
 .hero-section h1 {
-    font-size: 2.5rem;
-    background: linear-gradient(135deg, var(--cat-dsa-color), var(--cat-expert-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 1rem;
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, var(--cat-dsa-color), var(--cat-expert-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
 }
 
 .hero-section p {
-    font-size: 1.2rem;
-    color: var(--text-muted);
-    max-width: 600px;
-    margin: 0 auto;
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 /* Cards */
@@ -204,16 +210,16 @@ a:hover {
 }
 
 .cat-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    background: var(--bg-color);
-    width: 64px;
-    height: 64px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: var(--bg-color);
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
 }
 
 .category-card h3 {
@@ -230,20 +236,35 @@ a:hover {
 }
 
 /* Category Specific Borders/Accents */
-.cat-dsa:hover { border-color: var(--cat-dsa-color); }
-.cat-system-design:hover { border-color: var(--cat-sys-color); }
-.cat-database:hover { border-color: var(--cat-db-color); }
-.cat-javascript:hover { border-color: var(--cat-js-color); }
-.cat-lld:hover { border-color: var(--cat-lld-color); }
+.cat-dsa:hover {
+  border-color: var(--cat-dsa-color);
+}
+
+.cat-system-design:hover {
+  border-color: var(--cat-sys-color);
+}
+
+.cat-database:hover {
+  border-color: var(--cat-db-color);
+}
+
+.cat-javascript:hover {
+  border-color: var(--cat-js-color);
+}
+
+.cat-lld:hover {
+  border-color: var(--cat-lld-color);
+}
 
 
 /* Problem List Cards */
 .section-title {
-    margin-bottom: 1.5rem;
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+  margin-top: 5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .problem-list {
@@ -316,19 +337,52 @@ a:hover {
 }
 
 /* Category Header Themes */
-.category-dsa h1 { color: var(--cat-dsa-color); }
-.category-system-design h1 { color: var(--cat-sys-color); }
-.category-database h1 { color: var(--cat-db-color); }
-.category-javascript h1 { color: var(--cat-js-color); }
-.category-lld h1 { color: var(--cat-lld-color); }
+.category-dsa h1 {
+  color: var(--cat-dsa-color);
+}
+
+.category-system-design h1 {
+  color: var(--cat-sys-color);
+}
+
+.category-database h1 {
+  color: var(--cat-db-color);
+}
+
+.category-javascript h1 {
+  color: var(--cat-js-color);
+}
+
+.category-lld h1 {
+  color: var(--cat-lld-color);
+}
 
 
 /* Difficulty Badges */
-.badge-difficulty-basic { color: var(--diff-basic-color); background: var(--diff-basic-bg); }
-.badge-difficulty-easy { color: var(--diff-easy-color); background: var(--diff-easy-bg); }
-.badge-difficulty-medium { color: var(--diff-medium-color); background: var(--diff-medium-bg); }
-.badge-difficulty-hard { color: var(--diff-hard-color); background: var(--diff-hard-bg); }
-.badge-difficulty-expert { color: var(--diff-expert-color); background: var(--diff-expert-bg); }
+.badge-difficulty-basic {
+  color: var(--diff-basic-color);
+  background: var(--diff-basic-bg);
+}
+
+.badge-difficulty-easy {
+  color: var(--diff-easy-color);
+  background: var(--diff-easy-bg);
+}
+
+.badge-difficulty-medium {
+  color: var(--diff-medium-color);
+  background: var(--diff-medium-bg);
+}
+
+.badge-difficulty-hard {
+  color: var(--diff-hard-color);
+  background: var(--diff-hard-bg);
+}
+
+.badge-difficulty-expert {
+  color: var(--diff-expert-color);
+  background: var(--diff-expert-bg);
+}
 
 .tag {
   background-color: var(--tag-bg);
@@ -342,21 +396,21 @@ a:hover {
 
 /* Buttons */
 .button-ghost {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    color: var(--text-muted);
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: all 0.2s;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s;
 }
 
 .button-ghost:hover {
-    color: var(--text-color);
-    border-color: var(--text-muted);
-    background: var(--bg-color);
-    text-decoration: none;
+  color: var(--text-color);
+  border-color: var(--text-muted);
+  background: var(--bg-color);
+  text-decoration: none;
 }
 
 /* Code */
