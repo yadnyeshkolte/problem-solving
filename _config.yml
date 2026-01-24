@@ -1,9 +1,9 @@
 title: Problem Journey
-email: user@example.com
+email: yadnyeshkolte@gmail.com
 description: >-
   Documenting my daily learning journey.
-baseurl: ""
-url: ""
+baseurl: "/problem-solving"
+url: "https://yadnyeshkolte.github.io"
 
 # Build settings
 # theme: minima # Commented out to use custom layouts
