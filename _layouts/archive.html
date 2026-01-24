@@ -55,7 +55,7 @@ layout: default
                     <span class="badge">{{ problem.category }}</span>
                 </td>
                 <td>
-                    <span class="badge badge-{{ problem.difficulty | downcase }}">{{ problem.difficulty }}</span>
+                    <span class="badge badge-difficulty-{{ problem.difficulty | downcase | slugify }}">{{ problem.difficulty }}</span>
                 </td>
                 <td>
                     {% for topic in problem.topics %}
