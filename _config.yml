@@ -1,26 +1,45 @@
 title: Problem Journey
-email: yadnyeshkolte@gmail.com
-description: >-
-  Documenting my daily learning journey.
+description: "Documenting my daily learning journey."
 baseurl: "/problem-solving"
 url: "https://yadnyeshkolte.github.io"
 
-# Build settings
+# Author and Social
+author:
+  name: Yadnyesh Kolte
+  url: https://yadnyeshkolte.github.io
+
+# GitHub Repository
+github_username: yadnyeshkolte
+repository: yadnyeshkolte//problem-solving
+
+# Social/Open Graph
+social:
+  name: Yadnyesh Kolte
+  links:
+    - https://github.com/yadnyeshkolte
+    - https://yadnyeshkolte.github.io
+
+# Custom theme - no external theme dependency
+
+# Enable search
+search_enabled: true
+
+# Navigation
+nav_sort: case_insensitive
+
+# Aux links (commented out to save header space)
+# aux_links:
+#   "GitHub Repository": "https://github.com/yadnyeshkolte/problem-solving"
+
+# Footer
+footer_content: "Copyright &copy; @yadnyeshkolte"
+
+# SEO Settings
+lang: en
+tagline: "Problem Solving"
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-
-collections:
-  problems:
-    output: true
-    permalink: /problems/:slug/
-
-defaults:
-  - scope:
-      path: ""
-      type: "problems"
-    values:
-      layout: "problem"
-
-markdown: kramdown
-highlighter: rouge
+  - jekyll-sitemap
+  # - jekyll-remote-theme
