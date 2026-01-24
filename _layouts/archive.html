@@ -8,6 +8,14 @@ layout: default
     <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
         <input type="text" id="search-input" placeholder="Search problems..." style="padding: 8px; border: 1px solid var(--border-color); border-radius: 4px; flex: 1;">
         
+        <select id="category-filter" style="padding: 8px; border: 1px solid var(--border-color); border-radius: 4px;">
+            <option value="all">All Categories</option>
+            {% assign all_categories = site.problems | map: "category" | uniq | sort %}
+            {% for category in all_categories %}
+            <option value="{{ category }}">{{ category }}</option>
+            {% endfor %}
+        </select>
+
         <select id="difficulty-filter" style="padding: 8px; border: 1px solid var(--border-color); border-radius: 4px;">
             <option value="all">All Difficulties</option>
             <option value="Easy">Easy</option>
@@ -30,6 +38,7 @@ layout: default
         <thead>
             <tr>
                 <th>Problem</th>
+                <th>Category</th>
                 <th>Difficulty</th>
                 <th>Topics</th>
                 <th>Date</th>
@@ -38,9 +47,12 @@ layout: default
         <tbody>
             {% assign problems = site.problems | sort: "date" | reverse %}
             {% for problem in problems %}
-            <tr data-difficulty="{{ problem.difficulty }}" data-topics="{{ problem.topics | join: ',' }}">
+            <tr data-difficulty="{{ problem.difficulty }}" data-topics="{{ problem.topics | join: ',' }}" data-category="{{ problem.category }}">
                 <td>
                     <a href="{{ problem.url | relative_url }}" class="problem-title">{{ problem.title }}</a>
+                </td>
+                <td>
+                    <span class="badge">{{ problem.category }}</span>
                 </td>
                 <td>
                     <span class="badge badge-{{ problem.difficulty | downcase }}">{{ problem.difficulty }}</span>

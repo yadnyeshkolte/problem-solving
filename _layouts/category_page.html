@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<div class="category-header category-{{ page.category_filter | downcase | slugify }}">
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.description }}</p>
+</div>
+
+<p style="margin-bottom: 2rem; color: var(--text-color); opacity: 0.8;">
+    <a href="{{ '/problems/' | relative_url }}">← Back to Dashboard</a>
+</p>
+
+<div class="problem-list">
+    {% assign problems = site.problems | where: "category", page.category_filter | sort: "date" | reverse %}
+    
+    {% if problems.size > 0 %}
+        {% for problem in problems %}
+        <a href="{{ problem.url | relative_url }}" class="problem-card">
+            <div class="problem-info">
+                <h3>{{ problem.title }}</h3>
+                <div class="problem-meta">
+                    <span class="badge badge-difficulty-{{ problem.difficulty | downcase | slugify }}">{{ problem.difficulty }}</span>
+                    {% for topic in problem.topics %}
+                    <span class="tag">{{ topic }}</span>
+                    {% endfor %}
+                    <span>📅 {{ problem.date | date: "%b %d, %Y" }}</span>
+                </div>
+            </div>
+            <div>
+                 <!-- Difficulty badge already shown on left, maybe show something else here or keep generic -->
+            </div>
+        </a>
+        {% endfor %}
+    {% else %}
+        <div class="card" style="text-align: center; padding: 3rem;">
+            <h3>No problems added to {{ page.title }} yet.</h3>
+            <p>Add a file in <code>_problems/{{ page.category_filter | downcase | slugify }}/</code> with <code>category: {{ page.category_filter }}</code>.</p>
+        </div>
+    {% endif %}
+</div>

@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<h1>{{ page.title }} Problems</h1>
+<p style="margin-bottom: 2rem; color: var(--text-color); opacity: 0.8;">
+    <a href="{{ '/problems/' | relative_url }}">← Back to Dashboard</a>
+</p>
+
+<div class="problem-list">
+    {% assign problems = site.problems | where: "difficulty", page.difficulty_filter | sort: "date" | reverse %}
+    
+    {% if problems.size > 0 %}
+        {% for problem in problems %}
+        <a href="{{ problem.url | relative_url }}" class="problem-card">
+            <div class="problem-info">
+                <h3>{{ problem.title }}</h3>
+                <div class="problem-meta">
+                    <span class="badge badge-category">{{ problem.category }}</span>
+                    {% for topic in problem.topics %}
+                    <span class="tag">{{ topic }}</span>
+                    {% endfor %}
+                    <span>📅 {{ problem.date | date: "%b %d, %Y" }}</span>
+                </div>
+            </div>
+            <div>
+                <span class="badge badge-{{ problem.difficulty | downcase }}">{{ problem.difficulty }}</span>
+            </div>
+        </a>
+        {% endfor %}
+    {% else %}
+        <div class="card" style="text-align: center; padding: 3rem;">
+            <h3>No problems found for this difficulty yet.</h3>
+            <p>Time to solve some!</p>
+        </div>
+    {% endif %}
+</div>

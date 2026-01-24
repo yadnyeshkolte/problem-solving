@@ -23,25 +23,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Search and Filter
     const searchInput = document.getElementById('search-input');
+    const categoryFilter = document.getElementById('category-filter');
     const difficultyFilter = document.getElementById('difficulty-filter');
     const topicFilter = document.getElementById('topic-filter');
     const tableRows = document.querySelectorAll('#problems-table tbody tr');
 
     function filterProblems() {
         const searchTerm = searchInput ? searchInput.value.toLowerCase() : '';
+        const category = categoryFilter ? categoryFilter.value : 'all';
         const difficulty = difficultyFilter ? difficultyFilter.value : 'all';
         const topic = topicFilter ? topicFilter.value : 'all';
 
         tableRows.forEach(row => {
             const title = row.querySelector('.problem-title').textContent.toLowerCase();
+            const rowCategory = row.getAttribute('data-category');
             const rowDifficulty = row.getAttribute('data-difficulty');
             const rowTopics = row.getAttribute('data-topics');
 
             const matchesSearch = title.includes(searchTerm);
+            const matchesCategory = category === 'all' || rowCategory === category;
             const matchesDifficulty = difficulty === 'all' || rowDifficulty === difficulty;
             const matchesTopic = topic === 'all' || rowTopics.includes(topic);
 
-            if (matchesSearch && matchesDifficulty && matchesTopic) {
+            if (matchesSearch && matchesCategory && matchesDifficulty && matchesTopic) {
                 row.style.display = '';
             } else {
                 row.style.display = 'none';
@@ -50,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (searchInput) searchInput.addEventListener('input', filterProblems);
+    if (categoryFilter) categoryFilter.addEventListener('change', filterProblems);
     if (difficultyFilter) difficultyFilter.addEventListener('change', filterProblems);
     if (topicFilter) topicFilter.addEventListener('change', filterProblems);
 });

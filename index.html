@@ -1,4 +1,91 @@
 ---
-layout: home
-title: Dashboard
+layout: default
+title: Home
 ---
+
+<div class="hero-section">
+    <h1>Welcome Back, Engineer 🚀</h1>
+    <p>Master the 5 pillars of Software Engineering. Track your progress and level up.</p>
+</div>
+
+<div class="category-grid">
+    <a href="{{ '/problems/dsa/' | relative_url }}" class="category-card cat-dsa">
+        <div class="cat-icon">🧩</div>
+        <h3>DSA</h3>
+        <p>Data Structures & Algorithms</p>
+        <span class="badge" style="margin-top: auto; background: var(--cat-dsa-color); color: white;">
+            {{ site.problems | where: "category", "DSA" | size }} Problems
+        </span>
+    </a>
+
+    <a href="{{ '/problems/system-design/' | relative_url }}" class="category-card cat-system-design">
+        <div class="cat-icon">🏗️</div>
+        <h3>System Design</h3>
+        <p>Scalable Architectures</p>
+        <span class="badge" style="margin-top: auto; background: var(--cat-sys-color); color: white;">
+            {{ site.problems | where: "category", "System Design" | size }} Problems
+        </span>
+    </a>
+
+    <a href="{{ '/problems/database/' | relative_url }}" class="category-card cat-database">
+        <div class="cat-icon">💾</div>
+        <h3>Database</h3>
+        <p>SQL & NoSQL optimization</p>
+        <span class="badge" style="margin-top: auto; background: var(--cat-db-color); color: white;">
+            {{ site.problems | where: "category", "Database" | size }} Problems
+        </span>
+    </a>
+
+    <a href="{{ '/problems/javascript/' | relative_url }}" class="category-card cat-javascript">
+        <div class="cat-icon">⚡</div>
+        <h3>JavaScript</h3>
+        <p>Frontend & JS Internals</p>
+        <span class="badge" style="margin-top: auto; background: var(--cat-js-color); color: white;">
+            {{ site.problems | where: "category", "JavaScript" | size }} Problems
+        </span>
+    </a>
+
+    <a href="{{ '/problems/lld/' | relative_url }}" class="category-card cat-lld">
+        <div class="cat-icon">📐</div>
+        <h3>LLD</h3>
+        <p>Low-Level Design Patterns</p>
+        <span class="badge" style="margin-top: auto; background: var(--cat-lld-color); color: white;">
+            {{ site.problems | where: "category", "LLD" | size }} Problems
+        </span>
+    </a>
+</div>
+
+<h2 class="section-title">Latest Solved</h2>
+<div class="problem-list">
+    {% assign recent_problems = site.problems | sort: "date" | reverse | limit: 5 %}
+    {% for problem in recent_problems %}
+    <a href="{{ problem.url | relative_url }}" class="problem-card">
+        <div class="problem-info">
+            <h3>{{ problem.title }}</h3>
+            <div class="problem-meta">
+                <span class="badge" style="background: var(--bg-color); border: 1px solid var(--border-color);">{{ problem.category }}</span>
+                {% for topic in problem.topics %}
+                <span class="tag">{{ topic }}</span>
+                {% endfor %}
+                <span>📅 {{ problem.date | date: "%b %d" }}</span>
+            </div>
+        </div>
+        <div>
+            <span class="badge badge-difficulty-{{ problem.difficulty | downcase | slugify }}">{{ problem.difficulty }}</span>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+
+<div style="margin-top: 3rem; text-align: center;">
+    <p style="opacity: 0.7; font-size: 0.9rem; margin-bottom: 1rem;">Difficulty Levels</p>
+    <div style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;">
+        <span class="badge badge-difficulty-basic">Basic</span>
+        <span class="badge badge-difficulty-easy">Easy</span>
+        <span class="badge badge-difficulty-medium">Medium</span>
+        <span class="badge badge-difficulty-hard">Hard</span>
+        <span class="badge badge-difficulty-expert">Expert</span>
+    </div>
+    <br>
+    <a href="{{ '/problems/all/' | relative_url }}" class="button-ghost">View Full Archive →</a>
+</div>
