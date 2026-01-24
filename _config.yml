@@ -3,10 +3,9 @@ email: yadnyeshkolte@gmail.com
 description: >-
   Documenting my daily learning journey.
 baseurl: "/problem-solving"
-url: "https://yadnyeshkolte.github.io"
+url: "https://yourusername.github.io"
 
 # Build settings
-# theme: minima # Commented out to use custom layouts
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
