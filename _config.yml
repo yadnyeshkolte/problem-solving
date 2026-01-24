@@ -43,3 +43,18 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   # - jekyll-remote-theme
+
+collections:
+  problems:
+    output: true
+    permalink: /problems/:slug/
+
+defaults:
+  - scope:
+      path: ""
+      type: "problems"
+    values:
+      layout: "problem"
+
+markdown: kramdown
+highlighter: rouge
