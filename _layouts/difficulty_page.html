@@ -24,7 +24,7 @@ layout: default
                 </div>
             </div>
             <div>
-                <span class="badge badge-{{ problem.difficulty | downcase }}">{{ problem.difficulty }}</span>
+                <span class="badge badge-difficulty-{{ problem.difficulty | downcase | slugify }}">{{ problem.difficulty }}</span>
             </div>
         </a>
         {% endfor %}
