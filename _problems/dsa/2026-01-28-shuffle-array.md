@@ -32,3 +32,29 @@ class Solution {
     }
 }
 ```
+
+## Solution
+
+`time_complexity: "O(n)"`
+`space_complexity: "O(1)"`
+
+```java
+class Solution {
+    public int[] shuffle(int[] nums, int n) {
+        // Step 1: Pack pairs into the right half of the array
+        for (int i = 0; i < n; i++) {
+            nums[i + n] = (nums[i + n] << 10) | nums[i];
+        }
+        
+        // Step 2: Unpack them into the correct positions
+        for (int i = 0; i < n; i++) {
+            int x = nums[i + n] & 1023;       // Get the original first 10 bits (x)
+            int y = nums[i + n] >> 10;        // Get the shifted 10 bits (y)
+            
+            nums[2 * i] = x;
+            nums[2 * i + 1] = y;
+        }
+        return nums;
+    }
+}
+```
