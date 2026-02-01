@@ -1,5 +1,5 @@
 ---
-title: "How Many Numbers Are Smaller Than the Current Number"
+title: "Build an Array With Stack Operations"
 leetcode_url: "https://leetcode.com/problems/build-an-array-with-stack-operations/"
 difficulty: "Easy"
 topics: ["Array", "Stack", "Simulation"]
