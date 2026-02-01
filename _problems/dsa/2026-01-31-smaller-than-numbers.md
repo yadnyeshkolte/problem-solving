@@ -1,7 +1,7 @@
 ---
 title: "How Many Numbers Are Smaller Than the Current Number"
 leetcode_url: "https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/"
-difficulty: "Easy"
+difficulty: "Medium"
 topics: ["Array", "Hash Table", "Sorting", "Counting Sort"]
 category: "DSA"
 date: 2026-01-31
