@@ -1,42 +1,32 @@
-# DSA Tracker
+# problem-solving
 
-A personal documentation site for Data Structures & Algorithms, built with Jekyll.
+--||--
 
-## Features
-- **Dashboard**: Progress stats and contribution activity.
-- **Problems List**: Searchable and filterable table of solved problems.
-- **Dark Mode**: Built-in theme toggle.
-- **Categories**: Filter by difficulty and topics.
+![Language](https://img.shields.io/badge/language-HTML-blue) ![License](https://img.shields.io/badge/license-Apache%20License%202.0-green) ![Stars](https://img.shields.io/github/stars/problem-solving)
 
-## How to Add a New Problem
+## 📊 Stats
 
-1. Create a new file in `_problems/` with the format `YYYY-MM-DD-problem-slug.md`.
-2. Add the following frontmatter:
+- ⭐ **Stars**: 0
+- 🍴 **Forks**: 0
+- 📋 **Open Issues**: 0
+- 💻 **Primary Language**: HTML
 
-```yaml
+## 🛠 Tech Stack
+
+- `gitignore`: 1 files
+- `html`: 8 files
+- `unknown`: 2 files
+- `lock`: 1 files
+- `md`: 28 files
+- `yml`: 1 files
+- `css`: 1 files
+- `txt`: 1 files
+- `png`: 1 files
+- `js`: 1 files
+
+## 📄 License
+
+Apache License 2.0
+
 ---
-title: "Problem Title"
-leetcode_url: "https://leetcode.com/problems/..."
-difficulty: "Easy" # or Medium, Hard
-topics: ["Array", "Two Pointers"]
-date: 2026-01-23
-time_complexity: "O(n)"
-space_complexity: "O(1)"
----
-```
-
-3. Add your content below (Description, Approach, Code).
-
-## Local Development
-
-1. Install Ruby and Jekyll.
-2. Run `bundle install`.
-3. Run `bundle exec jekyll serve`.
-4. Open `http://localhost:4000`.
-
-## Structure
-
-- `_problems/`: Your problem documentation files.
-- `_layouts/`: HTML templates.
-- `assets/css/`: Styles.
-- `assets/js/`: Logic for search and theme toggle.
+*This README was auto-generated in fallback mode. For a complete README, try generating again.*
