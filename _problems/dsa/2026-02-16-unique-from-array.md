@@ -4,6 +4,7 @@ difficulty: "Easy"
 topics: ["Array"]
 category: "DSA"
 date: 2026-02-16
+source: "Raja Software Labs Question Test"
 time_complexity: "O(n^2)"
 space_complexity: "O(1)"
 ---
