@@ -40,18 +40,24 @@ Use a brute-force approach with nested loops. For each element, check if it appe
 
 ```java
 class Solution {
-    public static int returnUnique(int[] arr) {
-        int number1 = -1;
-        int number2 = -1;
-        for (int i = 0; i < arr.length; i++) {
+    public static void main(String[] args){
+        int[] arr = {1, 4, 1, 4, 2};
+        int[] arr1 = {9, 3, 2, 9, 3, 2, 3, 6};
+        int n = returnUnique(arr1);
+        System.out.println(n);
+
+    }
+    public static int returnUnique(int[] arr){
+        int number1 = -1; int number2 = -1;
+        for(int i=0;i<arr.length;i++){
             number1 = arr[i];
-            for (int j = i + 1; j < arr.length; j++) {
-                if (arr[i] == arr[j]) {
+            for(int j=i+1;j<arr.length;j++){
+                if(arr[i]==arr[j]){
                     number1 = -1;
                     break;
                 }
             }
-            if (number1 != -1) {
+            if(number1!=-1){
                 number2 = number1;
             }
         }
