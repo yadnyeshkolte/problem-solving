@@ -13,10 +13,16 @@ layout: default
             {% endfor %}
             <span style="margin: 0 10px; opacity: 0.6;">|</span>
             <span style="opacity: 0.6;">Solved: {{ page.date | date: "%b %d, %Y" }}</span>
+            {% if page.source %}
+            <span style="margin: 0 10px; opacity: 0.6;">|</span>
+            <span class="tag">Source: {{ page.source }}</span>
+            {% endif %}
         </div>
+        {% if page.leetcode_url %}
         <a href="{{ page.leetcode_url }}" target="_blank" style="display: inline-flex; align-items: center;">
             View on LeetCode ↗
         </a>
+        {% endif %}
     </div>
 
     <div class="card">
