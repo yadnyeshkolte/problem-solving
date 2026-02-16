@@ -126,6 +126,10 @@ class Solution {
 }
 ```
 
+Time Complexity = `O(n^2 * k)`
+Space Complexity = `O(n * k)` 
+
+
 **Alternative Solution (Using Sorting - O(m * n log n)):**
 
 ```java
