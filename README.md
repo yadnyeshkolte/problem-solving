@@ -16,7 +16,8 @@ A personal documentation site for Data Structures & Algorithms, built with Jekyl
 ```yaml
 ---
 title: "Problem Title"
-leetcode_url: "https://leetcode.com/problems/..."
+problem_url: "https://leetcode.com/problems/..."
+platform: "LeetCode" # LeetCode, HackerRank, NeetCode
 difficulty: "Easy" # or Medium, Hard
 topics: ["Array", "Two Pointers"]
 date: 2026-01-23
@@ -24,6 +25,8 @@ time_complexity: "O(n)"
 space_complexity: "O(1)"
 ---
 ```
+
+`leetcode_url` is still supported for older entries, but new problems should use `problem_url`.
 
 3. Add your content below (Description, Approach, Code).
 

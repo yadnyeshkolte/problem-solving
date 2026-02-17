@@ -3,6 +3,28 @@ layout: default
 ---
 
 <article>
+    {% assign external_url = page.problem_url | default: page.leetcode_url %}
+    {% assign platform_value = page.platform | default: "" | downcase %}
+    {% assign platform_label = page.platform | default: "Source" %}
+
+    {% if platform_value != "" %}
+        {% if platform_value contains "leet" %}
+            {% assign platform_label = "LeetCode" %}
+        {% elsif platform_value contains "hacker" %}
+            {% assign platform_label = "HackerRank" %}
+        {% elsif platform_value contains "neet" %}
+            {% assign platform_label = "NeetCode" %}
+        {% endif %}
+    {% elsif external_url contains "leetcode.com" %}
+        {% assign platform_label = "LeetCode" %}
+    {% elsif external_url contains "hackerrank.com" %}
+        {% assign platform_label = "HackerRank" %}
+    {% elsif external_url contains "neetcode.io" %}
+        {% assign platform_label = "NeetCode" %}
+    {% elsif page.source %}
+        {% assign platform_label = page.source %}
+    {% endif %}
+
     <div style="margin-bottom: 2rem;">
         <h1 style="margin-bottom: 0.5rem;">{{ page.title }}</h1>
         <div style="margin-bottom: 1rem;">
@@ -18,9 +40,9 @@ layout: default
             <span class="tag">Source: {{ page.source }}</span>
             {% endif %}
         </div>
-        {% if page.leetcode_url %}
-        <a href="{{ page.leetcode_url }}" target="_blank" style="display: inline-flex; align-items: center;">
-            View on LeetCode ↗
+        {% if external_url %}
+        <a href="{{ external_url }}" target="_blank" style="display: inline-flex; align-items: center;">
+            View on {{ platform_label }} &rarr;
         </a>
         {% endif %}
     </div>

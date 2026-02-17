@@ -33,6 +33,16 @@
   --cat-js-color: #eab308;
   --cat-lld-color: #8b5cf6;
 
+  /* Platform Colors */
+  --source-leetcode-color: #ea580c;
+  --source-leetcode-bg: #fff7ed;
+  --source-hackerrank-color: #15803d;
+  --source-hackerrank-bg: #dcfce7;
+  --source-neetcode-color: #1d4ed8;
+  --source-neetcode-bg: #dbeafe;
+  --source-other-color: #475569;
+  --source-other-bg: #f1f5f9;
+
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -63,6 +73,15 @@
   --diff-hard-color: #fca5a5;
   --diff-expert-bg: rgba(126, 34, 206, 0.3);
   --diff-expert-color: #d8b4fe;
+
+  --source-leetcode-bg: rgba(234, 88, 12, 0.25);
+  --source-leetcode-color: #fdba74;
+  --source-hackerrank-bg: rgba(21, 128, 61, 0.25);
+  --source-hackerrank-color: #86efac;
+  --source-neetcode-bg: rgba(29, 78, 216, 0.3);
+  --source-neetcode-color: #93c5fd;
+  --source-other-bg: rgba(71, 85, 105, 0.35);
+  --source-other-color: #cbd5e1;
 }
 
 body {
@@ -249,6 +268,66 @@ a:hover {
   font-size: 0.9rem;
   display: block;
   margin-top: 0.5rem;
+}
+
+.platform-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.platform-stat {
+  text-align: center;
+  padding: 1rem 1.25rem;
+  margin-bottom: 0;
+}
+
+.platform-stat-value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  display: block;
+}
+
+.platform-stat-label {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.platform-leetcode {
+  border-bottom: 4px solid var(--source-leetcode-color);
+}
+
+.platform-hackerrank {
+  border-bottom: 4px solid var(--source-hackerrank-color);
+}
+
+.platform-neetcode {
+  border-bottom: 4px solid var(--source-neetcode-color);
+}
+
+.platform-other {
+  border-bottom: 4px solid var(--source-other-color);
+}
+
+.platform-section {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.platform-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.platform-section-header h2 {
+  margin: 0;
+  font-size: 1.15rem;
 }
 
 /* Category Grid */
@@ -466,6 +545,32 @@ a:hover {
   color: var(--text-color);
 }
 
+.badge-source {
+  border: 1px solid transparent;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.badge-source-leetcode {
+  color: var(--source-leetcode-color);
+  background: var(--source-leetcode-bg);
+}
+
+.badge-source-hackerrank {
+  color: var(--source-hackerrank-color);
+  background: var(--source-hackerrank-bg);
+}
+
+.badge-source-neetcode {
+  color: var(--source-neetcode-color);
+  background: var(--source-neetcode-bg);
+}
+
+.badge-source-other {
+  color: var(--source-other-color);
+  background: var(--source-other-bg);
+}
+
 .tag {
   background-color: var(--tag-bg);
   color: var(--tag-text);
@@ -612,5 +717,11 @@ table a.problem-title:hover {
 
   .stats-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .platform-section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
   }
 }

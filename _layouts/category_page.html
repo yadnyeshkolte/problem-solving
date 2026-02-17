@@ -8,10 +8,55 @@ layout: default
 </div>
 
 {% assign category_problems = site.problems | where: "category", page.category_filter %}
+{% assign problems = category_problems | sort: "date" | reverse %}
 {% assign total_count = category_problems | size %}
 {% assign easy_count = category_problems | where: "difficulty", "Easy" | size %}
 {% assign medium_count = category_problems | where: "difficulty", "Medium" | size %}
 {% assign hard_count = category_problems | where: "difficulty", "Hard" | size %}
+{% assign is_dsa_page = false %}
+{% if page.category_filter == "DSA" %}
+    {% assign is_dsa_page = true %}
+{% endif %}
+
+{% assign leetcode_count = 0 %}
+{% assign hackerrank_count = 0 %}
+{% assign neetcode_count = 0 %}
+{% assign other_count = 0 %}
+
+{% if is_dsa_page %}
+    {% for problem in problems %}
+        {% assign problem_link = problem.problem_url | default: problem.leetcode_url | default: "" %}
+        {% assign platform_value = problem.platform | default: "" | downcase %}
+        {% assign source_key = "other" %}
+
+        {% if platform_value != "" %}
+            {% if platform_value contains "leet" %}
+                {% assign source_key = "leetcode" %}
+            {% elsif platform_value contains "hacker" %}
+                {% assign source_key = "hackerrank" %}
+            {% elsif platform_value contains "neet" %}
+                {% assign source_key = "neetcode" %}
+            {% endif %}
+        {% elsif problem_link contains "leetcode.com" %}
+            {% assign source_key = "leetcode" %}
+        {% elsif problem_link contains "hackerrank.com" %}
+            {% assign source_key = "hackerrank" %}
+        {% elsif problem_link contains "neetcode.io" %}
+            {% assign source_key = "neetcode" %}
+        {% endif %}
+
+        {% case source_key %}
+            {% when "leetcode" %}
+                {% assign leetcode_count = leetcode_count | plus: 1 %}
+            {% when "hackerrank" %}
+                {% assign hackerrank_count = hackerrank_count | plus: 1 %}
+            {% when "neetcode" %}
+                {% assign neetcode_count = neetcode_count | plus: 1 %}
+            {% else %}
+                {% assign other_count = other_count | plus: 1 %}
+        {% endcase %}
+    {% endfor %}
+{% endif %}
 
 <!-- Stats Grid -->
 <div class="stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
@@ -33,31 +78,145 @@ layout: default
     </div>
 </div>
 
+{% if is_dsa_page %}
+<div class="platform-stats-grid">
+    <div class="card platform-stat platform-leetcode">
+        <span class="platform-stat-value">{{ leetcode_count }}</span>
+        <span class="platform-stat-label">LeetCode</span>
+    </div>
+    <div class="card platform-stat platform-hackerrank">
+        <span class="platform-stat-value">{{ hackerrank_count }}</span>
+        <span class="platform-stat-label">HackerRank</span>
+    </div>
+    <div class="card platform-stat platform-neetcode">
+        <span class="platform-stat-value">{{ neetcode_count }}</span>
+        <span class="platform-stat-label">NeetCode</span>
+    </div>
+    {% if other_count > 0 %}
+    <div class="card platform-stat platform-other">
+        <span class="platform-stat-value">{{ other_count }}</span>
+        <span class="platform-stat-label">Other Sources</span>
+    </div>
+    {% endif %}
+</div>
+{% endif %}
+
 <p style="margin-bottom: 2rem; color: var(--text-muted); font-size: 0.9rem;">
-    <a href="{{ '/' | relative_url }}">← Back to Dashboard</a>
+    <a href="{{ '/' | relative_url }}">&larr; Back to Dashboard</a>
 </p>
 
 <div class="problem-list">
-    {% assign problems = category_problems | sort: "date" | reverse %}
-    
     {% if problems.size > 0 %}
-        {% for problem in problems %}
-        <a href="{{ problem.url | relative_url }}" class="problem-card">
-            <div class="problem-info">
-                <h3>{{ problem.title }}</h3>
-                <div class="problem-meta">
-                    <span class="badge badge-difficulty-{{ problem.difficulty | downcase | slugify }}">{{ problem.difficulty }}</span>
-                    {% for topic in problem.topics %}
-                    <span class="tag">{{ topic }}</span>
-                    {% endfor %}
-                    <span>📅 {{ problem.date | date: "%b %d, %Y" }}</span>
+        {% if is_dsa_page %}
+            {% assign platform_order = "leetcode|hackerrank|neetcode|other" | split: "|" %}
+            {% for platform_key in platform_order %}
+                {% case platform_key %}
+                    {% when "leetcode" %}
+                        {% assign platform_label = "LeetCode" %}
+                        {% assign platform_count = leetcode_count %}
+                    {% when "hackerrank" %}
+                        {% assign platform_label = "HackerRank" %}
+                        {% assign platform_count = hackerrank_count %}
+                    {% when "neetcode" %}
+                        {% assign platform_label = "NeetCode" %}
+                        {% assign platform_count = neetcode_count %}
+                    {% else %}
+                        {% assign platform_label = "Other Sources" %}
+                        {% assign platform_count = other_count %}
+                {% endcase %}
+
+                {% assign show_platform_section = false %}
+                {% if platform_count > 0 %}
+                    {% assign show_platform_section = true %}
+                {% endif %}
+                {% if platform_key != "other" %}
+                    {% assign show_platform_section = true %}
+                {% endif %}
+
+                {% if show_platform_section %}
+                <section class="platform-section platform-{{ platform_key }}">
+                    <div class="platform-section-header">
+                        <h2>{{ platform_label }}</h2>
+                        <span class="badge badge-source badge-source-{{ platform_key }}">{{ platform_count }} Solved</span>
+                    </div>
+
+                    {% if platform_count > 0 %}
+                    <div class="problem-list">
+                        {% for problem in problems %}
+                            {% assign problem_link = problem.problem_url | default: problem.leetcode_url | default: "" %}
+                            {% assign platform_value = problem.platform | default: "" | downcase %}
+                            {% assign source_key = "other" %}
+
+                            {% if platform_value != "" %}
+                                {% if platform_value contains "leet" %}
+                                    {% assign source_key = "leetcode" %}
+                                {% elsif platform_value contains "hacker" %}
+                                    {% assign source_key = "hackerrank" %}
+                                {% elsif platform_value contains "neet" %}
+                                    {% assign source_key = "neetcode" %}
+                                {% endif %}
+                            {% elsif problem_link contains "leetcode.com" %}
+                                {% assign source_key = "leetcode" %}
+                            {% elsif problem_link contains "hackerrank.com" %}
+                                {% assign source_key = "hackerrank" %}
+                            {% elsif problem_link contains "neetcode.io" %}
+                                {% assign source_key = "neetcode" %}
+                            {% endif %}
+
+                            {% if source_key == platform_key %}
+                            <a href="{{ problem.url | relative_url }}" class="problem-card">
+                                <div class="problem-info">
+                                    <h3>{{ problem.title }}</h3>
+                                    <div class="problem-meta">
+                                        <span class="badge badge-difficulty-{{ problem.difficulty | downcase | slugify }}">{{ problem.difficulty }}</span>
+                                        <span class="badge badge-source badge-source-{{ source_key }}">
+                                            {% case source_key %}
+                                                {% when "leetcode" %}LeetCode
+                                                {% when "hackerrank" %}HackerRank
+                                                {% when "neetcode" %}NeetCode
+                                                {% else %}{{ problem.source | default: "Other" }}
+                                            {% endcase %}
+                                        </span>
+                                        {% for topic in problem.topics %}
+                                        <span class="tag">{{ topic }}</span>
+                                        {% endfor %}
+                                        <span>{{ problem.date | date: "%b %d, %Y" }}</span>
+                                    </div>
+                                </div>
+                                <div>
+                                     <!-- Difficulty badge already shown on left -->
+                                </div>
+                            </a>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    <div class="card" style="margin-bottom: 0;">
+                        <p style="margin: 0; color: var(--text-muted);">No {{ platform_label }} problems yet.</p>
+                    </div>
+                    {% endif %}
+                </section>
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            {% for problem in problems %}
+            <a href="{{ problem.url | relative_url }}" class="problem-card">
+                <div class="problem-info">
+                    <h3>{{ problem.title }}</h3>
+                    <div class="problem-meta">
+                        <span class="badge badge-difficulty-{{ problem.difficulty | downcase | slugify }}">{{ problem.difficulty }}</span>
+                        {% for topic in problem.topics %}
+                        <span class="tag">{{ topic }}</span>
+                        {% endfor %}
+                        <span>{{ problem.date | date: "%b %d, %Y" }}</span>
+                    </div>
                 </div>
-            </div>
-            <div>
-                 <!-- Difficulty badge already shown on left -->
-            </div>
-        </a>
-        {% endfor %}
+                <div>
+                     <!-- Difficulty badge already shown on left -->
+                </div>
+            </a>
+            {% endfor %}
+        {% endif %}
     {% else %}
         <div class="card" style="text-align: center; padding: 3rem;">
             <h3>No problems added to {{ page.title }} yet.</h3>
