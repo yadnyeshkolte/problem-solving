@@ -32,6 +32,7 @@
   --cat-db-color: #f59e0b;
   --cat-js-color: #eab308;
   --cat-lld-color: #8b5cf6;
+  --cat-dsa-oop-color: #ec4899;
 
   /* Platform Colors */
   --source-leetcode-color: #ea580c;
@@ -411,6 +412,10 @@ a:hover {
   border-color: var(--cat-lld-color);
 }
 
+.cat-dsa-oop:hover {
+  border-color: var(--cat-dsa-oop-color);
+}
+
 
 /* Problem List Cards */
 .section-title {
@@ -510,6 +515,10 @@ a:hover {
 
 .category-lld h1 {
   color: var(--cat-lld-color);
+}
+
+.category-dsa-oop h1 {
+  color: var(--cat-dsa-oop-color);
 }
 
 

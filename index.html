@@ -53,6 +53,15 @@ title: Home
             {{ site.problems | where: "category", "LLD" | size }} Problems
         </span>
     </a>
+
+    <a href="{{ '/problems/dsa-oop/' | relative_url }}" class="category-card cat-dsa-oop">
+        <div class="cat-icon">🎯</div>
+        <h3>DSA & OOP</h3>
+        <p>Practice Problems</p>
+        <span class="badge" style="margin-top: auto; background: var(--cat-dsa-oop-color); color: white;">
+            {{ site.problems | where: "category", "DSA & OOP" | size }} Problems
+        </span>
+    </a>
 </div>
 
 <h2 class="section-title">Latest Solved</h2>
@@ -63,7 +72,8 @@ title: Home
         <div class="problem-info">
             <h3>{{ problem.title }}</h3>
             <div class="problem-meta">
-                <span class="badge" style="background: var(--bg-color); border: 1px solid var(--border-color);">{{ problem.category }}</span>
+                <span class="badge" style="background: var(--bg-color); border: 1px solid var(--border-color);">{{
+                    problem.category }}</span>
                 {% for topic in problem.topics %}
                 <span class="tag">{{ topic }}</span>
                 {% endfor %}
@@ -71,7 +81,8 @@ title: Home
             </div>
         </div>
         <div>
-            <span class="badge badge-difficulty-{{ problem.difficulty | downcase | slugify }}">{{ problem.difficulty }}</span>
+            <span class="badge badge-difficulty-{{ problem.difficulty | downcase | slugify }}">{{ problem.difficulty
+                }}</span>
         </div>
     </a>
     {% endfor %}
