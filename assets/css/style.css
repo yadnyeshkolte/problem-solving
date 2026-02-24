@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
   --bg-color: #f8fafc;
   /* Slightly off-white for depth */
@@ -336,7 +342,7 @@ a:hover {
 /* Category Grid */
 .category-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
   margin-bottom: 4rem;
 }
@@ -353,7 +359,6 @@ a:hover {
   border: 1px solid var(--border-color);
   background-color: var(--card-bg);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  height: 100%;
   position: relative;
   overflow: hidden;
   box-shadow: var(--shadow-sm);
