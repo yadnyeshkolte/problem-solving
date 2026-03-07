@@ -49,30 +49,46 @@ Output: `false`
 
 ```java
 class Solution {
-    public int minEatingSpeed(int[] piles, int h) {
+    public boolean searchMatrix(int[][] matrix, int target) {
+        int n = matrix.length;
+        int m1 = matrix[0].length;
 
-        int n = piles.length;
-        Arrays.sort(piles);// 1 2 3 4
-        int k = 0;
-        for(k=1;k<=piles[n-1];k++){ //2
-            int index = 0;
-            int hour = 0;
-            while(index<n){
-                if(piles[index]>k){
-                    hour += Math.ceil((double)piles[index]/k);
-                    index++;
-                }
-                else{
-                    index++;
-                    hour++;
-                } //1 1 1 1 1 1
-
-            }
-            if(hour<=h){
-                return k;
+        if (n == 1 && m1 == 1) {
+            if (target == matrix[0][0]) {
+                return true;
+            } else {
+                return false;
             }
         }
-        return k;
+        
+        int top = 0;
+        int bottom = n - 1;
+        while (top <= bottom) {
+            int m = top + (bottom - top) / 2;
+            
+            if (target >= matrix[m][0] && target <= matrix[m][m1 - 1]) {
+                int left = 0;
+                int right = m1 - 1;
+
+                while (left <= right) {
+                    int m2 = left + (right - left) / 2; // formula
+                    if (matrix[m][m2] == target) {
+                        return true;
+                    } else if (matrix[m][m2] < target) {
+                        left = m2 + 1;
+                    } else {
+                        right = m2 - 1;
+                    }
+                }
+                return false;
+                
+            } else if (matrix[m][0] < target) {
+                top = m + 1;
+            } else {
+                bottom = m - 1;
+            }
+        }
+        return false;
     }
 }
 
