@@ -1,9 +1,13 @@
 ---
-title: 2026 02 22 Best Time Buy Sell Stock
-category:
-- DSA
-- NeetCode
-neetcode_url: https://neetcode.io/problems/buy-and-sell-crypto/question
+title: "Best Time to Buy and Sell Stock"
+leetcode_url: "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/"
+neetcode_url: "https://neetcode.io/problems/buy-and-sell-crypto/question"
+difficulty: "Easy"
+topics: ["Array", "Dynamic Programming"]
+category: ["DSA", "LeetCode", "NeetCode"]
+date: 2026-02-22
+time_complexity: "O(n)"
+space_complexity: "O(1)"
 ---
 
 Best Time to Buy and Sell Stock
