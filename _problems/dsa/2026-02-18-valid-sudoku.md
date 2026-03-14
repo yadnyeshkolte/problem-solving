@@ -1,6 +1,5 @@
 ---
 title: Valid Sudoku
-leetcode_url: https://neetcode.io/problems/valid-sudoku/question
 difficulty: Medium
 topics:
 - Array

@@ -1,6 +1,5 @@
 ---
 title: String Encode and Decode
-leetcode_url: https://neetcode.io/problems/string-encode-and-decode/question
 difficulty: Medium
 topics:
 - String

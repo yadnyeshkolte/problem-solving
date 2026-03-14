@@ -1,6 +1,5 @@
 ---
 title: Trapping Rain Water
-leetcode_url: https://neetcode.io/problems/trapping-rain-water/question
 difficulty: Hard
 topics:
 - Array

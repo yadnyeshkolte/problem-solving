@@ -1,6 +1,5 @@
 ---
 title: Three Integer Sum
-leetcode_url: https://neetcode.io/problems/three-integer-sum
 difficulty: Medium
 topics:
 - Array

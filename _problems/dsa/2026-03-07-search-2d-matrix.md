@@ -1,6 +1,5 @@
 ---
 title: Search a 2D Matrix
-leetcode_url: https://neetcode.io/problems/search-2d-matrix/question
 difficulty: Medium
 topics:
 - Array

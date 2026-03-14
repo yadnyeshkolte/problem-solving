@@ -1,6 +1,5 @@
 ---
 title: Longest Repeating Character Replacement
-leetcode_url: https://neetcode.io/problems/longest-repeating-substring-with-replacement/question
 difficulty: Medium
 topics:
 - String

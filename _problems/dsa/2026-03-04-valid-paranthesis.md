@@ -1,6 +1,5 @@
 ---
 title: Valid Parentheses
-leetcode_url: https://neetcode.io/problems/validate-parentheses/question
 difficulty: Easy
 topics:
 - String

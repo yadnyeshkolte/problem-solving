@@ -1,6 +1,5 @@
 ---
 title: Evaluate Reverse Polish Notation
-leetcode_url: https://neetcode.io/problems/evaluate-reverse-polish-notation/question
 difficulty: Medium
 topics:
 - Array

@@ -1,6 +1,5 @@
 ---
 title: Minimum Window Substring
-leetcode_url: https://neetcode.io/problems/minimum-window-with-characters/question
 difficulty: Hard
 topics:
 - String

@@ -1,6 +1,5 @@
 ---
 title: Sliding Window Maximum
-leetcode_url: https://neetcode.io/problems/sliding-window-maximum/question
 difficulty: Hard
 topics:
 - Array

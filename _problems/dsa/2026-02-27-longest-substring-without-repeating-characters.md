@@ -1,6 +1,5 @@
 ---
 title: Longest Substring Without Repeating Characters
-leetcode_url: https://neetcode.io/problems/longest-substring-without-duplicates/question
 difficulty: Medium
 topics:
 - String

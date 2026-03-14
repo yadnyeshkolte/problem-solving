@@ -1,6 +1,5 @@
 ---
 title: Container With Most Water
-leetcode_url: https://neetcode.io/problems/max-water-container/question
 difficulty: Medium
 topics:
 - Array

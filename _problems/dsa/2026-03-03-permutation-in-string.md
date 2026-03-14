@@ -1,6 +1,5 @@
 ---
 title: Permutation in String
-leetcode_url: https://neetcode.io/problems/permutation-string/question
 difficulty: Medium
 topics:
 - String

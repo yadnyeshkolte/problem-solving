@@ -1,6 +1,5 @@
 ---
 title: Koko Eating Bananas
-leetcode_url: https://neetcode.io/problems/eating-bananas/question
 difficulty: Medium
 topics:
 - Array

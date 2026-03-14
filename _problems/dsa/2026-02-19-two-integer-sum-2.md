@@ -1,6 +1,5 @@
 ---
 title: Two Integer Sum II
-leetcode_url: https://neetcode.io/problems/two-integer-sum-ii/question
 difficulty: Medium
 topics:
 - Array

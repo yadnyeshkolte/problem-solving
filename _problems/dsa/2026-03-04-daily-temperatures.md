@@ -1,6 +1,5 @@
 ---
 title: Daily Temperatures
-leetcode_url: https://neetcode.io/problems/daily-temperatures/question
 difficulty: Medium
 topics:
 - Array

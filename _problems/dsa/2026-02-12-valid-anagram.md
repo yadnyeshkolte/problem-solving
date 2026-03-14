@@ -1,6 +1,5 @@
 ---
 title: Valid Anagram
-leetcode_url: https://neetcode.io/problems/is-anagram
 difficulty: Easy
 topics:
 - String

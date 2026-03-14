@@ -1,6 +1,5 @@
 ---
 title: Longest Consecutive Sequence
-leetcode_url: https://neetcode.io/problems/longest-consecutive-sequence/question
 difficulty: Medium
 topics:
 - Array

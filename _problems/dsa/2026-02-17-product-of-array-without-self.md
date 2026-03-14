@@ -1,6 +1,5 @@
 ---
 title: Product of Array Except Self
-leetcode_url: https://neetcode.io/problems/products-of-array-discluding-self/question
 difficulty: Medium
 topics:
 - Array

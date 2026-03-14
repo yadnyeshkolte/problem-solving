@@ -1,6 +1,5 @@
 ---
 title: Largest Rectangle In Histogram
-leetcode_url: https://neetcode.io/problems/largest-rectangle-in-histogram/question
 difficulty: Hard
 topics:
 - Array

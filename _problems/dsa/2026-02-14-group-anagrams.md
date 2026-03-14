@@ -1,6 +1,5 @@
 ---
 title: Group Anagrams
-leetcode_url: https://neetcode.io/problems/anagram-groups/question
 difficulty: Medium
 topics:
 - Array

@@ -1,6 +1,5 @@
 ---
 title: Top K Frequent Elements
-leetcode_url: https://neetcode.io/problems/top-k-elements-in-list/question
 difficulty: Medium
 topics:
 - Array

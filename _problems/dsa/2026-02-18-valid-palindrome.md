@@ -1,6 +1,5 @@
 ---
 title: Valid Palindrome
-leetcode_url: https://neetcode.io/problems/is-palindrome/question
 difficulty: Easy
 topics:
 - String

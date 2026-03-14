@@ -1,6 +1,5 @@
 ---
 title: Contains Duplicate
-leetcode_url: https://neetcode.io/problems/duplicate-integer
 difficulty: Easy
 topics:
 - Array
