@@ -1,37 +1,41 @@
 ---
-title: 2026 03 14 Reverse Linkedlist
-category:
-- DSA
-- LeetCode
-- NeetCode
-leetcode_url: https://leetcode.com/problems/reverse-linked-list/description/
-neetcode_url: https://neetcode.io/problems/reverse-a-linked-list/question
+title: "Reverse Linked List"
+leetcode_url: "https://leetcode.com/problems/reverse-linked-list/description/"
+neetcode_url: "https://neetcode.io/problems/reverse-a-linked-list/question"
+difficulty: "Easy"
+topics: ["Linked List", "Recursion"]
+category: ["DSA", "LeetCode", "NeetCode"]
+date: 2026-03-14
+time_complexity: "O(n)"
+space_complexity: "O(1)"
 ---
 
-Reverse Linked List
-Solved 
-Easy
-Topics
-Company Tags
-Hints
-Given the beginning of a singly linked list head, reverse the list, and return the new beginning of the list.
+## Problem Description
 
-Example 1:
+Given the beginning of a singly linked list `head`, reverse the list, and return the new beginning of the list.
 
-Input: head = [0,1,2,3]
+**Example 1:**
 
-Output: [3,2,1,0]
-Example 2:
+**Input:** head = [0,1,2,3]  
+**Output:** [3,2,1,0]
 
-Input: head = []
+**Example 2:**
 
-Output: []
-Constraints:
+**Input:** head = []  
+**Output:** []
 
-0 <= The length of the list <= 1000.
--1000 <= Node.val <= 1000
+**Constraints:**
 
+- `0 <= The length of the list <= 1000`
+- `-1000 <= Node.val <= 1000`
 
+## Approach
+
+Use an iterative approach with two pointers: `prev` (initially `null`) and `current` (initially the `head`). Traverse the linked list, and at each step, temporarily store the `nextStep` node, then reverse the current node's `next` pointer to point to `prev`. Move `prev` and `current` one step forward. Continue this process until `current` becomes `null`, at which point `prev` pointing to the new head of the reversed list is returned. This runs in `O(n)` time complexity and `O(1)` space complexity.
+
+## Solution
+
+```java
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -57,3 +61,4 @@ class Solution {
         
     }
 }
+```

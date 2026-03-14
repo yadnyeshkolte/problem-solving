@@ -1,17 +1,13 @@
 ---
-title: Median of Two Sorted Arrays
-leetcode_url: https://leetcode.com/problems/median-of-two-sorted-arrays/description/
-difficulty: Hard
-topics:
-- Array
-- Binary Search
-- Divide and Conquer
-category:
-- DSA
-- LeetCode
+title: "Median of Two Sorted Arrays"
+leetcode_url: "https://leetcode.com/problems/median-of-two-sorted-arrays/description/"
+neetcode_url: "https://neetcode.io/problems/median-of-two-sorted-arrays/question"
+difficulty: "Hard"
+topics: ["Array", "Binary Search", "Divide and Conquer"]
+category: ["DSA", "LeetCode", "NeetCode"]
 date: 2026-03-14
-time_complexity: O(m + n)
-space_complexity: O(m + n)
+time_complexity: "O(m + n)"
+space_complexity: "O(m + n)"
 ---
 
 ## Problem Description
