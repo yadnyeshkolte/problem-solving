@@ -25,36 +25,22 @@ layout: default
 
 {% if is_dsa_page %}
     {% for problem in problems %}
-        {% assign problem_link = problem.problem_url | default: problem.leetcode_url | default: "" %}
-        {% assign platform_value = problem.platform | default: "" | downcase %}
-        {% assign source_key = "other" %}
-
-        {% if platform_value != "" %}
-            {% if platform_value contains "leet" %}
-                {% assign source_key = "leetcode" %}
-            {% elsif platform_value contains "hacker" %}
-                {% assign source_key = "hackerrank" %}
-            {% elsif platform_value contains "neet" %}
-                {% assign source_key = "neetcode" %}
-            {% endif %}
-        {% elsif problem_link contains "leetcode.com" %}
-            {% assign source_key = "leetcode" %}
-        {% elsif problem_link contains "hackerrank.com" %}
-            {% assign source_key = "hackerrank" %}
-        {% elsif problem_link contains "neetcode.io" %}
-            {% assign source_key = "neetcode" %}
+        {% assign is_other = true %}
+        {% if problem.leetcode_url %}
+            {% assign leetcode_count = leetcode_count | plus: 1 %}
+            {% assign is_other = false %}
         {% endif %}
-
-        {% case source_key %}
-            {% when "leetcode" %}
-                {% assign leetcode_count = leetcode_count | plus: 1 %}
-            {% when "hackerrank" %}
-                {% assign hackerrank_count = hackerrank_count | plus: 1 %}
-            {% when "neetcode" %}
-                {% assign neetcode_count = neetcode_count | plus: 1 %}
-            {% else %}
-                {% assign other_count = other_count | plus: 1 %}
-        {% endcase %}
+        {% if problem.neetcode_url %}
+            {% assign neetcode_count = neetcode_count | plus: 1 %}
+            {% assign is_other = false %}
+        {% endif %}
+        {% if problem.hackerrank_url or problem.platform contains "hacker" %}
+            {% assign hackerrank_count = hackerrank_count | plus: 1 %}
+            {% assign is_other = false %}
+        {% endif %}
+        {% if is_other %}
+            {% assign other_count = other_count | plus: 1 %}
+        {% endif %}
     {% endfor %}
 {% endif %}
 
@@ -143,39 +129,27 @@ layout: default
                     {% if platform_count > 0 %}
                     <div class="problem-list">
                         {% for problem in problems %}
-                            {% assign problem_link = problem.problem_url | default: problem.leetcode_url | default: "" %}
-                            {% assign platform_value = problem.platform | default: "" | downcase %}
-                            {% assign source_key = "other" %}
-
-                            {% if platform_value != "" %}
-                                {% if platform_value contains "leet" %}
-                                    {% assign source_key = "leetcode" %}
-                                {% elsif platform_value contains "hacker" %}
-                                    {% assign source_key = "hackerrank" %}
-                                {% elsif platform_value contains "neet" %}
-                                    {% assign source_key = "neetcode" %}
+                            {% assign show_problem = false %}
+                            {% if platform_key == "leetcode" and problem.leetcode_url %}
+                                {% assign show_problem = true %}
+                            {% elsif platform_key == "neetcode" and problem.neetcode_url %}
+                                {% assign show_problem = true %}
+                            {% elsif platform_key == "hackerrank" and (problem.hackerrank_url or problem.platform contains "hacker") %}
+                                {% assign show_problem = true %}
+                            {% elsif platform_key == "other" %}
+                                {% if problem.leetcode_url == nil and problem.neetcode_url == nil and problem.hackerrank_url == nil %}
+                                    {% assign show_problem = true %}
                                 {% endif %}
-                            {% elsif problem_link contains "leetcode.com" %}
-                                {% assign source_key = "leetcode" %}
-                            {% elsif problem_link contains "hackerrank.com" %}
-                                {% assign source_key = "hackerrank" %}
-                            {% elsif problem_link contains "neetcode.io" %}
-                                {% assign source_key = "neetcode" %}
                             {% endif %}
-
-                            {% if source_key == platform_key %}
+                            
+                            {% if show_problem %}
                             <a href="{{ problem.url | relative_url }}" class="problem-card">
                                 <div class="problem-info">
                                     <h3>{{ problem.title }}</h3>
                                     <div class="problem-meta">
                                         <span class="badge badge-difficulty-{{ problem.difficulty | downcase | slugify }}">{{ problem.difficulty }}</span>
-                                        <span class="badge badge-source badge-source-{{ source_key }}">
-                                            {% case source_key %}
-                                                {% when "leetcode" %}LeetCode
-                                                {% when "hackerrank" %}HackerRank
-                                                {% when "neetcode" %}NeetCode
-                                                {% else %}{{ problem.source | default: "Other" }}
-                                            {% endcase %}
+                                        <span class="badge badge-source badge-source-{{ platform_key }}">
+                                            {{ platform_label }}
                                         </span>
                                         {% for topic in problem.topics %}
                                         <span class="tag">{{ topic }}</span>
@@ -184,7 +158,6 @@ layout: default
                                     </div>
                                 </div>
                                 <div>
-                                     <!-- Difficulty badge already shown on left -->
                                 </div>
                             </a>
                             {% endif %}
@@ -212,7 +185,6 @@ layout: default
                     </div>
                 </div>
                 <div>
-                     <!-- Difficulty badge already shown on left -->
                 </div>
             </a>
             {% endfor %}

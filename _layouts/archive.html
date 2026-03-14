@@ -10,7 +10,7 @@ layout: default
         
         <select id="category-filter" style="padding: 8px; border: 1px solid var(--border-color); border-radius: 4px;">
             <option value="all">All Categories</option>
-            {% assign all_categories = site.problems | map: "category" | uniq | sort %}
+            {% assign all_categories = site.problems | map: "category" | flatten | uniq | sort %}
             {% for category in all_categories %}
             <option value="{{ category }}">{{ category }}</option>
             {% endfor %}
@@ -47,12 +47,14 @@ layout: default
         <tbody>
             {% assign problems = site.problems | sort: "date" | reverse %}
             {% for problem in problems %}
-            <tr data-difficulty="{{ problem.difficulty }}" data-topics="{{ problem.topics | join: ',' }}" data-category="{{ problem.category }}">
+            <tr data-difficulty="{{ problem.difficulty }}" data-topics="{{ problem.topics | join: ',' }}" data-category="{{ problem.category | join: ',' }}">
                 <td>
                     <a href="{{ problem.url | relative_url }}" class="problem-title">{{ problem.title }}</a>
                 </td>
                 <td>
-                    <span class="badge badge-category">{{ problem.category }}</span>
+                    {% for cat in problem.category %}
+                    <span class="badge badge-category">{{ cat }}</span>
+                    {% endfor %}
                 </td>
                 <td>
                     <span class="badge badge-difficulty-{{ problem.difficulty | downcase | slugify }}">{{ problem.difficulty }}</span>

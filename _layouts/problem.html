@@ -3,26 +3,13 @@ layout: default
 ---
 
 <article>
-    {% assign external_url = page.problem_url | default: page.leetcode_url %}
-    {% assign platform_value = page.platform | default: "" | downcase %}
-    {% assign platform_label = page.platform | default: "Source" %}
-
-    {% if platform_value != "" %}
-        {% if platform_value contains "leet" %}
-            {% assign platform_label = "LeetCode" %}
-        {% elsif platform_value contains "hacker" %}
-            {% assign platform_label = "HackerRank" %}
-        {% elsif platform_value contains "neet" %}
-            {% assign platform_label = "NeetCode" %}
-        {% endif %}
-    {% elsif external_url contains "leetcode.com" %}
-        {% assign platform_label = "LeetCode" %}
-    {% elsif external_url contains "hackerrank.com" %}
-        {% assign platform_label = "HackerRank" %}
-    {% elsif external_url contains "neetcode.io" %}
-        {% assign platform_label = "NeetCode" %}
-    {% elsif page.source %}
-        {% assign platform_label = page.source %}
+    {% assign has_leetcode = false %}
+    {% assign has_neetcode = false %}
+    {% if page.leetcode_url %}
+        {% assign has_leetcode = true %}
+    {% endif %}
+    {% if page.neetcode_url %}
+        {% assign has_neetcode = true %}
     {% endif %}
 
     <div style="margin-bottom: 2rem;">
@@ -40,9 +27,14 @@ layout: default
             <span class="tag">Source: {{ page.source }}</span>
             {% endif %}
         </div>
-        {% if external_url %}
-        <a href="{{ external_url }}" target="_blank" style="display: inline-flex; align-items: center;">
-            View on {{ platform_label }} &rarr;
+        {% if has_leetcode %}
+        <a href="{{ page.leetcode_url }}" target="_blank" style="display: inline-flex; align-items: center; margin-right: 15px;">
+            View on LeetCode &rarr;
+        </a>
+        {% endif %}
+        {% if has_neetcode %}
+        <a href="{{ page.neetcode_url }}" target="_blank" style="display: inline-flex; align-items: center;">
+            View on NeetCode &rarr;
         </a>
         {% endif %}
     </div>
