@@ -1,12 +1,18 @@
 ---
-title: "Longest Substring Without Repeating Characters"
-leetcode_url: "https://neetcode.io/problems/longest-substring-without-duplicates/question"
-difficulty: "Medium"
-topics: ["String", "Sliding Window", "Hash Set"]
-category: "DSA"
+title: Longest Substring Without Repeating Characters
+leetcode_url: https://neetcode.io/problems/longest-substring-without-duplicates/question
+difficulty: Medium
+topics:
+- String
+- Sliding Window
+- Hash Set
+category:
+- DSA
+- NeetCode
 date: 2026-02-27
-time_complexity: "O(n)"
-space_complexity: "O(m)"
+time_complexity: O(n)
+space_complexity: O(m)
+neetcode_url: https://neetcode.io/problems/longest-substring-without-duplicates/question
 ---
 
 ## Problem Description

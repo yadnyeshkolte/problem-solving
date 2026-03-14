@@ -1,12 +1,18 @@
 ---
-title: "Set Mismatch"
-leetcode_url: "https://leetcode.com/problems/set-mismatch/"
-difficulty: "Easy"
-topics: ["Array","Hash Table", "Bit Manipulation", "Sorting"]
-category: "DSA"
+title: Set Mismatch
+leetcode_url: https://leetcode.com/problems/set-mismatch/
+difficulty: Easy
+topics:
+- Array
+- Hash Table
+- Bit Manipulation
+- Sorting
+category:
+- DSA
+- LeetCode
 date: 2026-01-30
-time_complexity: "O(n)"
-space_complexity: "O(n)"
+time_complexity: O(n)
+space_complexity: O(n)
 ---
 
 ## Problem Description

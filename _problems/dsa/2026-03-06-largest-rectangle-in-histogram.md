@@ -1,12 +1,18 @@
 ---
-title: "Largest Rectangle In Histogram"
-leetcode_url: "https://neetcode.io/problems/largest-rectangle-in-histogram/question"
-difficulty: "Hard"
-topics: ["Array", "Stack", "Monotonic Stack"]
-category: "DSA"
+title: Largest Rectangle In Histogram
+leetcode_url: https://neetcode.io/problems/largest-rectangle-in-histogram/question
+difficulty: Hard
+topics:
+- Array
+- Stack
+- Monotonic Stack
+category:
+- DSA
+- NeetCode
 date: 2026-03-06
-time_complexity: "O(n^2)"
-space_complexity: "O(1)"
+time_complexity: O(n^2)
+space_complexity: O(1)
+neetcode_url: https://neetcode.io/problems/largest-rectangle-in-histogram/question
 ---
 
 ## Problem Description

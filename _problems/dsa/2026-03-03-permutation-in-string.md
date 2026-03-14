@@ -1,12 +1,18 @@
 ---
-title: "Permutation in String"
-leetcode_url: "https://neetcode.io/problems/permutation-string/question"
-difficulty: "Medium"
-topics: ["String", "Sliding Window", "Hash Table"]
-category: "DSA"
+title: Permutation in String
+leetcode_url: https://neetcode.io/problems/permutation-string/question
+difficulty: Medium
+topics:
+- String
+- Sliding Window
+- Hash Table
+category:
+- DSA
+- NeetCode
 date: 2026-03-03
-time_complexity: "O(n^3)"
-space_complexity: "O(1)"
+time_complexity: O(n^3)
+space_complexity: O(1)
+neetcode_url: https://neetcode.io/problems/permutation-string/question
 ---
 
 ## Problem Description

@@ -1,12 +1,15 @@
 ---
-title: "Valid Parenthesis Check"
-difficulty: "Easy"
-topics: ["Stack", "String"]
-category: "DSA"
+title: Valid Parenthesis Check
+difficulty: Easy
+topics:
+- Stack
+- String
+category:
+- DSA
 date: 2026-02-16
-time_complexity: "O(n)"
-space_complexity: "O(n)"
-source: "Practice"
+time_complexity: O(n)
+space_complexity: O(n)
+source: Practice
 ---
 
 ## Problem Description

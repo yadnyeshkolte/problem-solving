@@ -1,12 +1,19 @@
 ---
-title: "Sliding Window Maximum"
-leetcode_url: "https://neetcode.io/problems/sliding-window-maximum/question"
-difficulty: "Hard"
-topics: ["Array", "Sliding Window", "Queue", "Monotonic Queue"]
-category: "DSA"
+title: Sliding Window Maximum
+leetcode_url: https://neetcode.io/problems/sliding-window-maximum/question
+difficulty: Hard
+topics:
+- Array
+- Sliding Window
+- Queue
+- Monotonic Queue
+category:
+- DSA
+- NeetCode
 date: 2026-03-04
-time_complexity: "O(n*k)"
-space_complexity: "O(k)"
+time_complexity: O(n*k)
+space_complexity: O(k)
+neetcode_url: https://neetcode.io/problems/sliding-window-maximum/question
 ---
 
 ## Problem Description

@@ -1,12 +1,15 @@
 ---
-title: "Shuffle the Array"
-leetcode_url: "https://leetcode.com/problems/shuffle-the-array/"
-difficulty: "Easy"
-topics: ["Array"]
-category: "DSA"
+title: Shuffle the Array
+leetcode_url: https://leetcode.com/problems/shuffle-the-array/
+difficulty: Easy
+topics:
+- Array
+category:
+- DSA
+- LeetCode
 date: 2026-01-28
-time_complexity: "O(n)"
-space_complexity: "O(n)"
+time_complexity: O(n)
+space_complexity: O(n)
 ---
 
 ## Problem Description

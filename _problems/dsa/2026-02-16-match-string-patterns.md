@@ -1,12 +1,15 @@
 ---
-title: "Match String Patterns"
-difficulty: "Easy"
-topics: ["Hash Map", "String"]
-category: "DSA"
+title: Match String Patterns
+difficulty: Easy
+topics:
+- Hash Map
+- String
+category:
+- DSA
 date: 2026-02-16
-source: "Raja Software Labs Question Test"
-time_complexity: "O(n)"
-space_complexity: "O(n)"
+source: Raja Software Labs Question Test
+time_complexity: O(n)
+space_complexity: O(n)
 ---
 
 ## Problem Description

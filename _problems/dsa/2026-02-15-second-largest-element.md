@@ -1,12 +1,14 @@
 ---
-title: "Second Largest Element"
-difficulty: "Easy"
-topics: ["Array"]
-category: "DSA"
+title: Second Largest Element
+difficulty: Easy
+topics:
+- Array
+category:
+- DSA
 date: 2026-02-15
-time_complexity: "O(n)"
-space_complexity: "O(1)"
-source: "Practice"
+time_complexity: O(n)
+space_complexity: O(1)
+source: Practice
 ---
 
 ## Problem Description

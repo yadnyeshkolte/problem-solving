@@ -1,12 +1,17 @@
 ---
-title: "Koko Eating Bananas"
-leetcode_url: "https://neetcode.io/problems/eating-bananas/question"
-difficulty: "Medium"
-topics: ["Array", "Binary Search"]
-category: "DSA"
+title: Koko Eating Bananas
+leetcode_url: https://neetcode.io/problems/eating-bananas/question
+difficulty: Medium
+topics:
+- Array
+- Binary Search
+category:
+- DSA
+- NeetCode
 date: 2026-03-07
-time_complexity: "O(n * max(p))"
-space_complexity: "O(1)"
+time_complexity: O(n * max(p))
+space_complexity: O(1)
+neetcode_url: https://neetcode.io/problems/eating-bananas/question
 ---
 
 ## Problem Description

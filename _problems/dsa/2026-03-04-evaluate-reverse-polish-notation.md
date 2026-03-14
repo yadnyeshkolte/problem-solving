@@ -1,12 +1,18 @@
 ---
-title: "Evaluate Reverse Polish Notation"
-leetcode_url: "https://neetcode.io/problems/evaluate-reverse-polish-notation/question"
-difficulty: "Medium"
-topics: ["Array", "Math", "Stack"]
-category: "DSA"
+title: Evaluate Reverse Polish Notation
+leetcode_url: https://neetcode.io/problems/evaluate-reverse-polish-notation/question
+difficulty: Medium
+topics:
+- Array
+- Math
+- Stack
+category:
+- DSA
+- NeetCode
 date: 2026-03-04
-time_complexity: "O(n)"
-space_complexity: "O(n)"
+time_complexity: O(n)
+space_complexity: O(n)
+neetcode_url: https://neetcode.io/problems/evaluate-reverse-polish-notation/question
 ---
 
 ## Problem Description

@@ -1,12 +1,18 @@
 ---
-title: "Top K Frequent Elements"
-leetcode_url: "https://neetcode.io/problems/top-k-elements-in-list/question"
-difficulty: "Medium"
-topics: ["Array", "Hash Table", "Heap (Priority Queue)"]
-category: "DSA"
+title: Top K Frequent Elements
+leetcode_url: https://neetcode.io/problems/top-k-elements-in-list/question
+difficulty: Medium
+topics:
+- Array
+- Hash Table
+- Heap (Priority Queue)
+category:
+- DSA
+- NeetCode
 date: 2026-02-17
-time_complexity: "O(n log k)"
-space_complexity: "O(n)"
+time_complexity: O(n log k)
+space_complexity: O(n)
+neetcode_url: https://neetcode.io/problems/top-k-elements-in-list/question
 ---
 
 ## Problem Description

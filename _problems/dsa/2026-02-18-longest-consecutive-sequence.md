@@ -1,12 +1,18 @@
 ---
-title: "Longest Consecutive Sequence"
-leetcode_url: "https://neetcode.io/problems/longest-consecutive-sequence/question"
-difficulty: "Medium"
-topics: ["Array", "Hash Table", "Union Find"]
-category: "DSA"
+title: Longest Consecutive Sequence
+leetcode_url: https://neetcode.io/problems/longest-consecutive-sequence/question
+difficulty: Medium
+topics:
+- Array
+- Hash Table
+- Union Find
+category:
+- DSA
+- NeetCode
 date: 2026-02-18
-time_complexity: "O(n)"
-space_complexity: "O(n)"
+time_complexity: O(n)
+space_complexity: O(n)
+neetcode_url: https://neetcode.io/problems/longest-consecutive-sequence/question
 ---
 
 ## Problem Description

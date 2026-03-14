@@ -1,12 +1,18 @@
 ---
-title: "Trapping Rain Water"
-leetcode_url: "https://neetcode.io/problems/trapping-rain-water/question"
-difficulty: "Hard"
-topics: ["Array", "Two Pointers", "Dynamic Programming"]
-category: "DSA"
+title: Trapping Rain Water
+leetcode_url: https://neetcode.io/problems/trapping-rain-water/question
+difficulty: Hard
+topics:
+- Array
+- Two Pointers
+- Dynamic Programming
+category:
+- DSA
+- NeetCode
 date: 2026-02-21
-time_complexity: "O(n)"
-space_complexity: "O(n)"
+time_complexity: O(n)
+space_complexity: O(n)
+neetcode_url: https://neetcode.io/problems/trapping-rain-water/question
 ---
 
 ## Problem Description

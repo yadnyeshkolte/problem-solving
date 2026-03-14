@@ -1,12 +1,19 @@
 ---
-title: "Group Anagrams"
-leetcode_url: "https://neetcode.io/problems/anagram-groups/question"
-difficulty: "Medium"
-topics: ["Array", "Hash Table", "String", "Sorting"]
-category: "DSA"
+title: Group Anagrams
+leetcode_url: https://neetcode.io/problems/anagram-groups/question
+difficulty: Medium
+topics:
+- Array
+- Hash Table
+- String
+- Sorting
+category:
+- DSA
+- NeetCode
 date: 2026-02-14
-time_complexity: "O(m * n)"
-space_complexity: "O(m * n)"
+time_complexity: O(m * n)
+space_complexity: O(m * n)
+neetcode_url: https://neetcode.io/problems/anagram-groups/question
 ---
 
 ## Problem Description

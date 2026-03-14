@@ -1,12 +1,17 @@
 ---
-title: "Build an Array With Stack Operations"
-leetcode_url: "https://leetcode.com/problems/build-an-array-with-stack-operations/"
-difficulty: "Easy"
-topics: ["Array", "Stack", "Simulation"]
-category: "DSA"
+title: Build an Array With Stack Operations
+leetcode_url: https://leetcode.com/problems/build-an-array-with-stack-operations/
+difficulty: Easy
+topics:
+- Array
+- Stack
+- Simulation
+category:
+- DSA
+- LeetCode
 date: 2026-02-01
-time_complexity: "O(n)"
-space_complexity: "O(1)"
+time_complexity: O(n)
+space_complexity: O(1)
 ---
 
 ## Problem Description

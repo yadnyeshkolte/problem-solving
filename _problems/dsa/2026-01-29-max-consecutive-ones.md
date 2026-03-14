@@ -1,12 +1,15 @@
 ---
-title: "Max Consecutive Ones"
-leetcode_url: "https://leetcode.com/problems/max-consecutive-ones/"
-difficulty: "Easy"
-topics: ["Array"]
-category: "DSA"
+title: Max Consecutive Ones
+leetcode_url: https://leetcode.com/problems/max-consecutive-ones/
+difficulty: Easy
+topics:
+- Array
+category:
+- DSA
+- LeetCode
 date: 2026-01-29
-time_complexity: "O(n)"
-space_complexity: "O(1)"
+time_complexity: O(n)
+space_complexity: O(1)
 ---
 
 ## Problem Description

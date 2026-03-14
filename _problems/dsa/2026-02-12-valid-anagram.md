@@ -1,12 +1,18 @@
 ---
-title: "Valid Anagram"
-leetcode_url: "https://neetcode.io/problems/is-anagram"
-difficulty: "Easy"
-topics: ["String", "Hash Table", "Sorting"]
-category: "DSA"
+title: Valid Anagram
+leetcode_url: https://neetcode.io/problems/is-anagram
+difficulty: Easy
+topics:
+- String
+- Hash Table
+- Sorting
+category:
+- DSA
+- NeetCode
 date: 2026-02-12
-time_complexity: "O(n)"
-space_complexity: "O(1)"
+time_complexity: O(n)
+space_complexity: O(1)
+neetcode_url: https://neetcode.io/problems/is-anagram
 ---
 
 ## Problem Description

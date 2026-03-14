@@ -1,12 +1,15 @@
 ---
-title: "Longest Continuous Numbers in an Array"
-difficulty: "Medium"
-topics: ["Array", "Sorting"]
-category: "DSA"
+title: Longest Continuous Numbers in an Array
+difficulty: Medium
+topics:
+- Array
+- Sorting
+category:
+- DSA
 date: 2026-02-16
-source: "Raja Software Labs Question Test"
-time_complexity: "O(n log n)"
-space_complexity: "O(1)"
+source: Raja Software Labs Question Test
+time_complexity: O(n log n)
+space_complexity: O(1)
 ---
 
 ## Problem Description

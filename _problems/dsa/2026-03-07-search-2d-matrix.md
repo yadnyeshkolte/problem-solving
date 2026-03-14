@@ -1,12 +1,18 @@
 ---
-title: "Search a 2D Matrix"
-leetcode_url: "https://neetcode.io/problems/search-2d-matrix/question"
-difficulty: "Medium"
-topics: ["Array", "Binary Search", "Matrix"]
-category: "DSA"
+title: Search a 2D Matrix
+leetcode_url: https://neetcode.io/problems/search-2d-matrix/question
+difficulty: Medium
+topics:
+- Array
+- Binary Search
+- Matrix
+category:
+- DSA
+- NeetCode
 date: 2026-03-07
-time_complexity: "O(log(m * n))"
-space_complexity: "O(1)"
+time_complexity: O(log(m * n))
+space_complexity: O(1)
+neetcode_url: https://neetcode.io/problems/search-2d-matrix/question
 ---
 
 ## Problem Description

@@ -1,12 +1,16 @@
 ---
-title: "Find All Numbers Disappeared in an Array"
-leetcode_url: "https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/"
-difficulty: "Easy"
-topics: ["Array", "Hash Table"]
-category: "DSA"
+title: Find All Numbers Disappeared in an Array
+leetcode_url: https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/
+difficulty: Easy
+topics:
+- Array
+- Hash Table
+category:
+- DSA
+- LeetCode
 date: 2026-01-31
-time_complexity: "O(n)"
-space_complexity: "O(n)"
+time_complexity: O(n)
+space_complexity: O(n)
 ---
 
 ## Problem Description

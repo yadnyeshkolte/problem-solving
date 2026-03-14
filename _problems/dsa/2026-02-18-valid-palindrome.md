@@ -1,12 +1,17 @@
 ---
-title: "Valid Palindrome"
-leetcode_url: "https://neetcode.io/problems/is-palindrome/question"
-difficulty: "Easy"
-topics: ["String", "Two Pointers"]
-category: "DSA"
+title: Valid Palindrome
+leetcode_url: https://neetcode.io/problems/is-palindrome/question
+difficulty: Easy
+topics:
+- String
+- Two Pointers
+category:
+- DSA
+- NeetCode
 date: 2026-02-18
-time_complexity: "O(n)"
-space_complexity: "O(1)"
+time_complexity: O(n)
+space_complexity: O(1)
+neetcode_url: https://neetcode.io/problems/is-palindrome/question
 ---
 
 ## Problem Description

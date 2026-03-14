@@ -1,12 +1,18 @@
 ---
-title: "String Encode and Decode"
-leetcode_url: "https://neetcode.io/problems/string-encode-and-decode/question"
-difficulty: "Medium"
-topics: ["String", "Design", "Array"]
-category: "DSA"
+title: String Encode and Decode
+leetcode_url: https://neetcode.io/problems/string-encode-and-decode/question
+difficulty: Medium
+topics:
+- String
+- Design
+- Array
+category:
+- DSA
+- NeetCode
 date: 2026-02-17
-time_complexity: "O(n)"
-space_complexity: "O(n)"
+time_complexity: O(n)
+space_complexity: O(n)
+neetcode_url: https://neetcode.io/problems/string-encode-and-decode/question
 ---
 
 ## Problem Description

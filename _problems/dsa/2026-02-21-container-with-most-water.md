@@ -1,12 +1,18 @@
 ---
-title: "Container With Most Water"
-leetcode_url: "https://neetcode.io/problems/max-water-container/question"
-difficulty: "Medium"
-topics: ["Array", "Two Pointers", "Greedy"]
-category: "DSA"
+title: Container With Most Water
+leetcode_url: https://neetcode.io/problems/max-water-container/question
+difficulty: Medium
+topics:
+- Array
+- Two Pointers
+- Greedy
+category:
+- DSA
+- NeetCode
 date: 2026-02-21
-time_complexity: "O(n)"
-space_complexity: "O(1)"
+time_complexity: O(n)
+space_complexity: O(1)
+neetcode_url: https://neetcode.io/problems/max-water-container/question
 ---
 
 ## Problem Description

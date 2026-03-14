@@ -1,12 +1,18 @@
 ---
-title: "Longest Repeating Character Replacement"
-leetcode_url: "https://neetcode.io/problems/longest-repeating-substring-with-replacement/question"
-difficulty: "Medium"
-topics: ["String", "Sliding Window", "Hash Table"]
-category: "DSA"
+title: Longest Repeating Character Replacement
+leetcode_url: https://neetcode.io/problems/longest-repeating-substring-with-replacement/question
+difficulty: Medium
+topics:
+- String
+- Sliding Window
+- Hash Table
+category:
+- DSA
+- NeetCode
 date: 2026-03-03
-time_complexity: "O(n^2)"
-space_complexity: "O(1)"
+time_complexity: O(n^2)
+space_complexity: O(1)
+neetcode_url: https://neetcode.io/problems/longest-repeating-substring-with-replacement/question
 ---
 
 ## Problem Description

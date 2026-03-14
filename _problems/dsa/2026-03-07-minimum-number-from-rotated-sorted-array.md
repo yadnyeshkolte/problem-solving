@@ -1,12 +1,17 @@
 ---
-title: "Find Minimum in Rotated Sorted Array"
-leetcode_url: "https://neetcode.io/problems/find-minimum-in-rotated-sorted-array/question"
-difficulty: "Medium"
-topics: ["Array", "Binary Search"]
-category: "DSA"
+title: Find Minimum in Rotated Sorted Array
+leetcode_url: https://neetcode.io/problems/find-minimum-in-rotated-sorted-array/question
+difficulty: Medium
+topics:
+- Array
+- Binary Search
+category:
+- DSA
+- NeetCode
 date: 2026-03-07
-time_complexity: "O(log n)"
-space_complexity: "O(1)"
+time_complexity: O(log n)
+space_complexity: O(1)
+neetcode_url: https://neetcode.io/problems/find-minimum-in-rotated-sorted-array/question
 ---
 
 ## Problem Description

@@ -1,6 +1,10 @@
-
-https://neetcode.io/problems/buy-and-sell-crypto/question
-
+---
+title: 2026 02 22 Best Time Buy Sell Stock
+category:
+- DSA
+- NeetCode
+neetcode_url: https://neetcode.io/problems/buy-and-sell-crypto/question
+---
 
 Best Time to Buy and Sell Stock
 Solved 

@@ -1,12 +1,18 @@
 ---
-title: "Valid Sudoku"
-leetcode_url: "https://neetcode.io/problems/valid-sudoku/question"
-difficulty: "Medium"
-topics: ["Array", "Hash Table", "Matrix"]
-category: "DSA"
+title: Valid Sudoku
+leetcode_url: https://neetcode.io/problems/valid-sudoku/question
+difficulty: Medium
+topics:
+- Array
+- Hash Table
+- Matrix
+category:
+- DSA
+- NeetCode
 date: 2026-02-18
-time_complexity: "O(n^2)"
-space_complexity: "O(n^2)"
+time_complexity: O(n^2)
+space_complexity: O(n^2)
+neetcode_url: https://neetcode.io/problems/valid-sudoku/question
 ---
 
 ## Problem Description

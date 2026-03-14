@@ -1,12 +1,16 @@
 ---
-title: "String Multiplication"
-difficulty: "Easy"
-topics: ["String", "Math", "Hash Map"]
-category: "DSA"
+title: String Multiplication
+difficulty: Easy
+topics:
+- String
+- Math
+- Hash Map
+category:
+- DSA
 date: 2026-02-16
-source: "Raja Software Labs Question Test"
-time_complexity: "O(n + m)"
-space_complexity: "O(1)"
+source: Raja Software Labs Question Test
+time_complexity: O(n + m)
+space_complexity: O(1)
 ---
 
 ## Problem Description

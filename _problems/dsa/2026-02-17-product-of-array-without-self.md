@@ -1,12 +1,17 @@
 ---
-title: "Product of Array Except Self"
-leetcode_url: "https://neetcode.io/problems/products-of-array-discluding-self/question"
-difficulty: "Medium"
-topics: ["Array", "Prefix Sum"]
-category: "DSA"
+title: Product of Array Except Self
+leetcode_url: https://neetcode.io/problems/products-of-array-discluding-self/question
+difficulty: Medium
+topics:
+- Array
+- Prefix Sum
+category:
+- DSA
+- NeetCode
 date: 2026-02-17
-time_complexity: "O(n)"
-space_complexity: "O(n)"
+time_complexity: O(n)
+space_complexity: O(n)
+neetcode_url: https://neetcode.io/problems/products-of-array-discluding-self/question
 ---
 
 ## Problem Description

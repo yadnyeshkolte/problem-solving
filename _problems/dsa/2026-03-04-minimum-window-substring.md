@@ -1,12 +1,18 @@
 ---
-title: "Minimum Window Substring"
-leetcode_url: "https://neetcode.io/problems/minimum-window-with-characters/question"
-difficulty: "Hard"
-topics: ["String", "Sliding Window", "Hash Table"]
-category: "DSA"
+title: Minimum Window Substring
+leetcode_url: https://neetcode.io/problems/minimum-window-with-characters/question
+difficulty: Hard
+topics:
+- String
+- Sliding Window
+- Hash Table
+category:
+- DSA
+- NeetCode
 date: 2026-03-04
-time_complexity: "O(n^3)"
-space_complexity: "O(n)"
+time_complexity: O(n^3)
+space_complexity: O(n)
+neetcode_url: https://neetcode.io/problems/minimum-window-with-characters/question
 ---
 
 ## Problem Description

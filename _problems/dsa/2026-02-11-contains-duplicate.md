@@ -1,12 +1,17 @@
 ---
-title: "Contains Duplicate"
-leetcode_url: "https://neetcode.io/problems/duplicate-integer"
-difficulty: "Easy"
-topics: ["Array", "Hash Table"]
-category: "DSA"
+title: Contains Duplicate
+leetcode_url: https://neetcode.io/problems/duplicate-integer
+difficulty: Easy
+topics:
+- Array
+- Hash Table
+category:
+- DSA
+- NeetCode
 date: 2026-02-11
-time_complexity: "O(n)"
-space_complexity: "O(n)"
+time_complexity: O(n)
+space_complexity: O(n)
+neetcode_url: https://neetcode.io/problems/duplicate-integer
 ---
 
 ## Problem Description

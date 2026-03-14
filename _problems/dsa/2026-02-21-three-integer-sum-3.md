@@ -1,12 +1,18 @@
 ---
-title: "Three Integer Sum"
-leetcode_url: "https://neetcode.io/problems/three-integer-sum"
-difficulty: "Medium"
-topics: ["Array", "Two Pointers", "Sorting"]
-category: "DSA"
+title: Three Integer Sum
+leetcode_url: https://neetcode.io/problems/three-integer-sum
+difficulty: Medium
+topics:
+- Array
+- Two Pointers
+- Sorting
+category:
+- DSA
+- NeetCode
 date: 2026-02-21
-time_complexity: "O(n^2)"
-space_complexity: "O(1) or O(n)"
+time_complexity: O(n^2)
+space_complexity: O(1) or O(n)
+neetcode_url: https://neetcode.io/problems/three-integer-sum
 ---
 
 ## Problem Description

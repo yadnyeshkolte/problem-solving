@@ -1,12 +1,17 @@
 ---
-title: "Two Integer Sum II"
-leetcode_url: "https://neetcode.io/problems/two-integer-sum-ii/question"
-difficulty: "Medium"
-topics: ["Array", "Two Pointers"]
-category: "DSA"
+title: Two Integer Sum II
+leetcode_url: https://neetcode.io/problems/two-integer-sum-ii/question
+difficulty: Medium
+topics:
+- Array
+- Two Pointers
+category:
+- DSA
+- NeetCode
 date: 2026-02-19
-time_complexity: "O(n)"
-space_complexity: "O(1)"
+time_complexity: O(n)
+space_complexity: O(1)
+neetcode_url: https://neetcode.io/problems/two-integer-sum-ii/question
 ---
 
 ## Problem Description

@@ -1,12 +1,17 @@
 ---
-title: "Valid Parentheses"
-leetcode_url: "https://neetcode.io/problems/validate-parentheses/question"
-difficulty: "Easy"
-topics: ["String", "Stack"]
-category: "DSA"
+title: Valid Parentheses
+leetcode_url: https://neetcode.io/problems/validate-parentheses/question
+difficulty: Easy
+topics:
+- String
+- Stack
+category:
+- DSA
+- NeetCode
 date: 2026-03-04
-time_complexity: "O(n)"
-space_complexity: "O(n)"
+time_complexity: O(n)
+space_complexity: O(n)
+neetcode_url: https://neetcode.io/problems/validate-parentheses/question
 ---
 
 ## Problem Description
