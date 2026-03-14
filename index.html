@@ -72,8 +72,9 @@ title: Home
         <div class="problem-info">
             <h3>{{ problem.title }}</h3>
             <div class="problem-meta">
-                <span class="badge" style="background: var(--bg-color); border: 1px solid var(--border-color);">{{
-                    problem.category }}</span>
+                {% for cat in problem.category %}
+                <span class="badge" style="background: var(--bg-color); border: 1px solid var(--border-color);">{{ cat }}</span>
+                {% endfor %}
                 {% for topic in problem.topics %}
                 <span class="tag">{{ topic }}</span>
                 {% endfor %}
